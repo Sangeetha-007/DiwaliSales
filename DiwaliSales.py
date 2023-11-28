@@ -10,11 +10,11 @@ data = pd.read_csv('https://raw.githubusercontent.com/Sangeetha-007/DiwaliSales/
 os.environ['SHAPE_RESTORE_SHX'] = 'YES'
 
 # Load the GeoJSON or Shapefile data using geopandas
-map_data = gpd.read_file('/Users/Sangeetha/Downloads/archive (6)/Indian_States.dbf')  # Replace with your geographical data
+map_data = gpd.read_file('/Users/Sangeetha/Downloads/archive (6)/Indian_States.dbf')  
 
 #print(map_data)
 
-#Merge your CSV data with the geographical data
+#Merge CSV data with the geographical data
 merged_data = map_data.merge(data, how='left', left_on='st_nm', right_on='State')
 
 
